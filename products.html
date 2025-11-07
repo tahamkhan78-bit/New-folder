@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OceanGate - Products</title>
+  <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header class="header">
+  <div class="wrap">
+    <div class="logo">
+      <img src="./logo ocean.png" alt="logo">
+      <div style="font-weight:700">OceanGate</div>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="support.html">Support</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:8px">
+    
+      <a href="cart.html" style="color:white;text-decoration:none;font-weight:700">Cart (<span id="cart-count">0</span>)</a>
+    </div>
+  </div>
+</header>
+
+  <main>
+    <section class="brand-section">
+      <h2>Our Brands</h2>
+      <div class="brand-container">
+        <div class="brand" data-brand="samsung">
+          <img src="./assets/logo samsung.png" alt="Samsung" />
+        </div>
+        <div class="brand" data-brand="intel">
+          <img src="./assets/intel logo.png" alt="Intel" />
+        </div>
+        <div class="brand" data-brand="amd">
+          <img src="./assets/amd logo.png" alt="AMD" />
+        </div>
+        <div class="brand" data-brand="sony">
+          <img src="./assets/sony logo.png" alt="Sony" />
+        </div>
+        <div class="brand" data-brand="lg">
+          <img src="./assets/LG LOGO.png" alt="LG" />
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="products">
+      <p class="empty-msg">Click a brand to view its products.</p>
+    </section>
+  </main>
+
+
+   <footer>
+        <div class="container-1">
+            <div class="footer-content-1">
+                <div class="footer-column-1">
+                    <h3>OceanGate Limited</h3>
+                    <p style="color: white;">Quality storage products. Fast delivery. Excellent after-sales support.</p>
+                </div>
+                <div class="footer-column-1">
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">CDs & DVDs</a></li>
+                        <li><a href="#">Optical Drives</a></li>
+                        <li><a href="#">SSD Solutions</a></li>
+                        <li><a href="#">External Storage</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column-1">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Service Centers</a></li>
+                        <li><a href="#">Warranty Information</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                        <li><a href="#">Downloads</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column-1">
+                    <h3>Follow Us</h3>
+                    <div class="social-media-link">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-1">
+                <p>&copy; 2023 OceanGate Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+<script>
+
+const productsData = {
+  samsung: [
+    { name: "product 1", desc: "Smartphone with AI Camera", img: "sa1.jpeg" },
+    { name: "product 2", desc: "Android Tablet", img: "sa2.jpeg" },
+    { name: "product 3", desc: "4K QLED Smart TV", img: "sa3.jpeg" },
+    { name: "product 4", desc: "Smart Fitness Watch", img: "sa4.jpeg" },
+    { name: "product 5", desc: "NVMe Drive", img: "sa5.jpeg" },
+    { name: "product 6", desc: "Noise Canceling Earbuds", img: "sa6.jpeg" },
+    { name: "product 7", desc: "Powerful Laptop", img: "sa7.webp" },
+    { name: "product 8", desc: "Smart Home Appliance", img: "sa8.jpeg" },
+    { name: "product 9", desc: "Surround Audio", img: "sa9.webp" },
+    { name: "product 10", desc: "Health Tracker", img: "sa10.webp" },
+  ],
+  intel: [
+    { name: "product 1", desc: "High-end CPU", img: "in1.webp" },
+    { name: "product 2", desc: "Gaming CPU", img: "in2.jpeg" },
+    { name: "product 3", desc: "Graphics Card", img: "in3.jpeg" },
+    { name: "product 4", desc: "Mini Desktop", img: "in4.jpg" },
+    { name: "product 5", desc: "Server Processor", img: "in5.jpeg" },
+    { name: "product 6", desc: "Z790 Chipset", img: "in6.jpg" },
+    { name: "product 7", desc: "2TB Storage", img: "in7.webp" },
+    { name: "product 8", desc: "AX210 Model", img: "in8.jpeg" },
+    { name: "product 9", desc: "Memory Module", img: "in9.webp" },
+    { name: "product 10", desc: "CPU Cooling", img: "in10.jpeg" },
+  ],
+  amd: [
+    { name: "product 1", desc: "Top Performance CPU", img: "amd1.jpeg" },
+    { name: "product 2", desc: "Gaming Beast", img: "amd2.jpeg" },
+    { name: "product 3", desc: "Powerful GPU", img: "amd3.jpeg" },
+    { name: "product 4", desc: "Ryzen Powered Laptop", img: "amd4.jpeg" },
+    { name: "product 5", desc: "X670E Model", img: "amd5.jpeg" },
+    { name: "product 6", desc: "Wraith Prism", img: "amd6.jpeg" },
+    { name: "product 7", desc: "Gen4 Drive", img: "amd7.jpeg" },
+    { name: "product 8", desc: "B650 Model", img: "amd8.jpeg" },
+    { name: "product 9", desc: "DDR5 RAM", img: "amd9.jpg" },
+    { name: "product 10", desc: "Silent Cooling", img: "amd10.jpeg" },
+  ],
+  sony: [
+    { name: "product 1", desc: "4K OLED", img: "so1.jpg" },
+    { name: "product 2", desc: "Next-gen Console", img: "so2.jpg" },
+    { name: "product 3", desc: "Wireless Headphones", img: "so3.jpg" },
+    { name: "product 4", desc: "Flagship Smartphone", img: "so4.jpg" },
+    { name: "product 5", desc: "Mirrorless Camera", img: "so5.jpg" },
+    { name: "product 6", desc: "Dolby Atmos", img: "so6.jpg" },
+    { name: "product 7", desc: "Bluetooth Speaker", img: "so7.jpg" },
+    { name: "product 8", desc: "4K Projection", img: "so8.jpg" },
+    { name: "product 9", desc: "Smart Controller", img: "so9.jpg" },
+    { name: "product 10", desc: "Virtual Reality", img: "so10.jpg" },
+  ],
+  lg: [
+    { name: "product 1", desc: "C4 Smart TV", img: "lg1.jpeg" },
+    { name: "product 2", desc: "Smart Cooling", img: "lg2.jpeg" },
+    { name: "product 3", desc: "UltraWide Display", img: "lg3.jpeg" },
+    { name: "product 4", desc: "Smart Wash", img: "lg4.jpeg" },
+    { name: "product 5", desc: "Surround Audio", img: "lg5.jpeg" },
+    { name: "product 6", desc: "Convection Model", img: "lg6.jpeg" },
+    { name: "product 7", desc: "Dual Inverter", img: "lg7.jpeg" },
+    { name: "product 8", desc: "Cordless Cleaner", img: "lg8.jpeg" },
+    { name: "product 9", desc: "Smart Filter", img: "lg9.jpg" },
+    { name: "product 10", desc: "Gram Series", img: "lg10.jpeg" },
+  ],
+};
+
+
+function displayProducts(list) {
+  const container = document.getElementById("products");
+  container.innerHTML = "";
+  list.forEach(p => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.innerHTML = `
+      <img src="${p.img}" alt="${p.name}">
+      <h3>${p.name}</h3>
+      <p>${p.desc}</p>
+    `;
+    container.appendChild(card);
+
+    setTimeout(() => card.style.opacity = 1, 100);
+  });
+}
+
+
+function showRandomProducts() {
+  let all = [];
+  Object.values(productsData).forEach(arr => all = all.concat(arr));
+  const shuffled = all.sort(() => 0.5 - Math.random());
+  const selected = shuffled.slice(0, 20);
+  displayProducts(selected);
+}
+
+
+document.querySelectorAll(".brand").forEach(brand => {
+  brand.addEventListener("click", () => {
+    const name = brand.dataset.brand;
+    displayProducts(productsData[name]);
+  });
+});
+
+
+window.addEventListener("DOMContentLoaded", showRandomProducts);
+
+</script>
+
+<script src="script.js"></script>
+</body></html>
